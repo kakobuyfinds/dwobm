@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>YoyBuy spreadsheet : catégories, photos QC et guide d’achat</title>
+  <meta name="description" content="Explorez les catégories du YoyBuy spreadsheet et apprenez à vérifier un lien produit, lire les photos QC, choisir une taille et calculer le coût livré.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#172f36">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="YoyBuy spreadsheet : catégories, photos QC et guide d’achat">
+  <meta property="og:description" content="Un guide en français pour comparer les tailles, vérifier les liens et préparer le coût d’une commande.">
+  <style>
+    :root{color-scheme:light;--fond:#f6f1e9;--encre:#172f36;--papier:#fffdf8;--ligne:#d5d4c9;--accent:#9b3d2e}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--fond);color:var(--encre);font:1rem/1.6 system-ui,-apple-system,sans-serif}
+    h1,h2,h3,p,figure{margin:0}
+    h1,h2,h3{line-height:1.12;text-wrap:balance}
+    h1,h2{font-family:Georgia,serif;font-weight:700}
+    h1{font-size:clamp(2.8rem,7.4vw,6.2rem);letter-spacing:-.055em}
+    h2{font-size:clamp(1.85rem,4vw,3rem);letter-spacing:-.035em}
+    h3{font-size:1.13rem}
+    p+p,h3+p,summary+p{margin-top:.65rem}
+    a{color:inherit}
+    a:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+    .wrap{width:min(71rem,calc(100% - 2rem));margin-inline:auto}
+    .masthead,.footer{padding:1rem 0;border-bottom:1px solid var(--ligne)}
+    .masthead .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.5rem 1rem}
+    .brand{font-weight:850;text-decoration:none}
+    .edition,figcaption{font-size:.87rem}
+    .hero{display:grid;grid-template-columns:1.25fr 1fr;align-items:stretch;gap:1rem;margin-top:1.2rem}
+    .intro{background:var(--encre);color:var(--papier);padding:clamp(1.35rem,4vw,3.8rem);border-radius:1.15rem;align-content:center}
+    .intro p{max-width:39ch;margin-top:1rem}
+    .cta{display:inline-block;margin-top:1.3rem;padding:.65rem 1rem;background:#f1c5a8;color:var(--encre);border-radius:.5rem;font-weight:750;text-decoration:none}
+    .intro a:focus-visible{outline-color:#f1c5a8}
+    figure{overflow:hidden;border:1px solid var(--ligne);background:var(--papier);border-radius:1rem}
+    img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:contain;background:#f4f1ec}
+    .hero figure{display:grid;grid-template-rows:1fr auto}
+    .hero img{height:100%;max-height:29rem}
+    figcaption{padding:.55rem .75rem}
+    section{margin:2.45rem 0}
+    section>h2{margin-bottom:.9rem}
+    .categories,.gallery,.articles{display:grid;gap:.65rem}
+    .categories{grid-template-columns:repeat(5,minmax(0,1fr))}
+    .categories a{display:flex;align-items:center;min-height:3.2rem;padding:.55rem .75rem;border:1px solid var(--ligne);border-radius:.5rem;background:var(--papier);text-decoration:none;font-weight:700}
+    .categories a:hover,.cta:hover{text-decoration:underline}
+    .gallery{grid-template-columns:repeat(4,minmax(0,1fr))}
+    .articles{grid-template-columns:repeat(3,minmax(0,1fr))}
+    article{padding:1rem;background:var(--papier);border:1px solid var(--ligne);border-top:3px solid var(--accent);border-radius:.55rem}
+    details{padding:.85rem 0;border-top:1px solid var(--ligne)}
+    summary{cursor:pointer;font-weight:750}
+    details p{max-width:70ch}
+    .footer{border-bottom:0;border-top:1px solid var(--ligne)}
+    @media(max-width:55rem){.categories{grid-template-columns:repeat(3,minmax(0,1fr))}.articles{grid-template-columns:1fr}}
+    @media(max-width:39rem){.hero{grid-template-columns:1fr}.hero img{max-height:15rem}.categories,.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  </style>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "name": "YoyBuy spreadsheet : catégories, photos QC et guide d’achat",
+      "inLanguage": "fr",
+      "mainEntity": [
+        {"@type":"Question","name":"Qu’est-ce qu’un YoyBuy spreadsheet ?","acceptedAnswer":{"@type":"Answer","text":"C’est un répertoire de liens produits classés par catégorie. Cette page présente un guide indépendant et des raccourcis vers cafans.com."}},
+        {"@type":"Question","name":"Que faire si un lien produit ne fonctionne plus ?","acceptedAnswer":{"@type":"Answer","text":"Recherchez la référence et le nom du vendeur, puis comparez les photos, la variante et le tableau des tailles de la nouvelle fiche."}},
+        {"@type":"Question","name":"Que montrent les photos QC ?","acceptedAnswer":{"@type":"Answer","text":"Les photos QC documentent l’état apparent de l’article photographié. Demandez, si possible, un gros plan ou une mesure lorsque le détail qui vous intéresse reste flou."}},
+        {"@type":"Question","name":"Comment estimer le coût d’un colis vers la France ?","acceptedAnswer":{"@type":"Answer","text":"Additionnez le prix de l’article, la livraison locale, les frais de service et le transport international. Vérifiez les taxes et frais éventuels, ainsi que le taux de conversion avant de valider."}}
+      ]
+    }
+  </script>
+  <!-- index.html
+    Recherche éditoriale : la page de résultats Bing n’a pas pu être consultée.
+    Les dix pages ci-dessous proviennent de la recherche web de substitution ; leur classement Bing reste non vérifié.
+    Catalogue et variantes : https://yoybuy.io/ ; https://www.yoybuy.org/ ; https://findsindex.com/en/yoybuy-spreadsheet
+    Vérification des liens : https://qcradar.com/yoybuy-spreadsheet ; https://one-to-oneyupoo.com/spreadsheets/yoybuy/ ; https://yoybuy.org.uk/
+    Guide, QC et livraison : https://cssbuy.tips/yoybuy-spreadsheet ; https://kakous.net/yoybuy-spreadsheet ; https://yoybuysheet.com/faq.html
+    Parcours par besoin : https://yoyubuy.com/
+    Requêtes secondaires : guide d’achat YoyBuy, liens produits YoyBuy, photos QC YoyBuy, livraison YoyBuy en France.
+  -->
+<link rel="canonical" href="https://kakobuyfinds.github.io/dwobm/">
+</head>
+<body>
+  <header class="masthead">
+    <div class="wrap">
+      <a class="brand" href="https://www.cafans.com">www.cafans.com</a>
+      <span class="edition">Guide francophone des achats par agent</span>
+    </div>
+  </header>
+  <main class="wrap">
+    <div class="hero">
+      <div class="intro">
+        <h1>YoyBuy spreadsheet</h1>
+        <p>Retrouvez les catégories de produits et gardez les bons réflexes pour vérifier une fiche, comparer les mesures et estimer le coût livré.</p>
+        <a class="cta" href="https://www.cafans.com">Explorer le catalogue Cafans</a>
+      </div>
+      <figure>
+        <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto%2Cq_auto%3Aeco%2Cc_scale%2Cw_300%2Cu_9ddf04c7-2a9a-4d76-add1-d15af8f0263d%2Cc_scale%2Cfl_relative%2Cw_1.0%2Ch_1.0%2Cfl_layer_apply/f888b4a3-a02a-420d-93e3-cb33c3bb30ac/AIR%2BFORCE%2B1%2B%2707.png" width="640" height="640" alt="Basket basse Nike Air Force 1 ’07" fetchpriority="high" loading="eager">
+        <figcaption>Nike Air Force 1 ’07 · Illustration</figcaption>
+      </figure>
+    </div>
+    <section aria-labelledby="cat">
+      <h2 id="cat">Parcourir les catégories</h2>
+      <nav class="categories" aria-labelledby="cat">
+        <a href="https://cafans.com/category-911-Shoes.html">Chaussures</a>
+        <a href="https://cafans.com/category-912-Hoodies%2FSweaters.html">Sweats et pulls</a>
+        <a href="https://cafans.com/category-913-T-Shirts.html">T-shirts</a>
+        <a href="https://cafans.com/category-914-Jackets.html">Vestes</a>
+        <a href="https://cafans.com/category-915-Pants%2FShorts.html">Pantalons et shorts</a>
+        <a href="https://cafans.com/category-916-Headwear.html">Casquettes et bonnets</a>
+        <a href="https://cafans.com/category-917-Sets.html">Ensembles</a>
+        <a href="https://cafans.com/category-918-underwear%2Funderpants.html">Sous-vêtements</a>
+        <a href="https://cafans.com/category-919-Jersey.html">Maillots</a>
+        <a href="https://cafans.com/category-920-Accessories.html">Accessoires</a>
+      </nav>
+    </section>
+    <section aria-labelledby="choix">
+      <h2 id="choix">Choisir un article à partir d’une fiche</h2>
+      <div class="articles">
+        <article>
+          <h3>Vérifier les liens produits YoyBuy</h3>
+          <p>Pour retrouver une fiche Taobao ou 1688, notez la référence du produit, le nom du vendeur, la couleur et la taille choisies. Comparez le titre de la fiche à la variante sélectionnée. En cas de lien expiré, reprenez ces éléments pour chercher une nouvelle fiche et vérifiez que l’agent accepte le lien marchand.</p>
+        </article>
+        <article>
+          <h3>Comparer la pointure et les mesures du vêtement</h3>
+          <p>Pour des baskets, mesurez les deux pieds et comparez la longueur du plus grand au tableau des pointures du vendeur. Pour un sweat ou une veste, mesurez à plat la largeur de poitrine, la longueur du dos et les manches d’un vêtement qui vous va. Pour un pantalon, comparez le tour de taille et la longueur d’entrejambe.</p>
+        </article>
+        <article>
+          <h3>Lire les photos QC YoyBuy</h3>
+          <p>Un contrôle qualité en entrepôt peut aider à vérifier le coloris reçu, l’étiquette de taille et l’état des coutures. Pour une fermeture éclair, un fermoir de bracelet ou une semelle, demandez une photo rapprochée. Une photo de contrôle ne suffit pas à établir l’authenticité d’un article.</p>
+        </article>
+      </div>
+    </section>
+    <section aria-labelledby="visuels">
+      <h2 id="visuels">Repères visuels par type de pièce</h2>
+      <div class="gallery">
+        <figure>
+          <img src="https://assets.christiandior.com/is/image/diorprod/943J605A0554C080_E01-3?%24default_GHC%24=&amp;crop=438%2C150%2C1130%2C1358&amp;wid=420" width="420" height="420" loading="lazy" decoding="async" alt="T-shirt blanc Dior CD Icon en jersey de coton">
+          <figcaption>Dior · T-shirt CD Icon</figcaption>
+        </figure>
+        <figure>
+          <img src="https://media.gucci.com/style/HEXFBFBFB_South_0_160_640x640/1751298339/838745_3HBC4_2600_001_100_0000_Light.jpg" width="640" height="640" loading="lazy" decoding="async" alt="Casquette Gucci en toile GG beige et brune">
+          <figcaption>Gucci · Casquette en toile GG</figcaption>
+        </figure>
+        <figure>
+          <img src="https://media-assets.grailed.com/prd/listing/temp/f695e3369a1a450ca2bb75e1fb3018f0?auto=format&amp;w=420" width="420" height="420" loading="lazy" decoding="async" alt="Carré Hermès bleu clair et blanc à motif de bateau à vapeur">
+          <figcaption>Hermès · Carré à motif de bateau</figcaption>
+        </figure>
+        <figure>
+          <img src="https://en.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-lv-iconic-bracelet--M00587_PM1_Front%20view.jpg?wid=420" width="420" height="420" loading="lazy" decoding="async" alt="Bracelet Louis Vuitton LV Iconic vu de face">
+          <figcaption>Louis Vuitton · Bracelet LV Iconic</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section aria-labelledby="budget">
+      <h2 id="budget">Préparer la livraison YoyBuy en France</h2>
+      <article aria-labelledby="livraison">
+        <h3 id="livraison">Calculer le coût total avant de valider</h3>
+        <p>Notez le prix produit, les frais de livraison du vendeur à l’entrepôt, les frais de service et le coût de la ligne d’expédition internationale. Comparez le poids réel et le poids volumétrique selon la méthode du transporteur. Si vous regroupez plusieurs articles, demandez une estimation du colis consolidé.</p>
+        <p>Pour comparer deux devis, utilisez la même devise et vérifiez le taux de change appliqué, les options de suivi, les conditions de retour, ainsi que les taxes et frais éventuels à la réception.</p>
+      </article>
+    </section>
+    <section aria-labelledby="faq">
+      <h2 id="faq">Questions fréquentes</h2>
+      <details open>
+        <summary>Qu’est-ce qu’un YoyBuy spreadsheet ?</summary>
+        <p>C’est un répertoire de liens produits classés par catégorie. Cette page présente un guide indépendant et des raccourcis vers cafans.com.</p>
+      </details>
+      <details>
+        <summary>Que faire si un lien produit ne fonctionne plus ?</summary>
+        <p>Recherchez la référence et le nom du vendeur, puis comparez les photos, la variante et le tableau des tailles de la nouvelle fiche.</p>
+      </details>
+      <details>
+        <summary>Que montrent les photos QC ?</summary>
+        <p>Les photos QC documentent l’état apparent de l’article photographié. Demandez, si possible, un gros plan ou une mesure lorsque le détail qui vous intéresse reste flou.</p>
+      </details>
+      <details>
+        <summary>Comment estimer le coût d’un colis vers la France ?</summary>
+        <p>Additionnez le prix de l’article, la livraison locale, les frais de service et le transport international. Vérifiez les taxes et frais éventuels, ainsi que le taux de conversion avant de valider.</p>
+      </details>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="wrap">
+      <p>Guide indépendant. Les photos de marque servent d’illustrations.</p>
+      <p><a href="https://www.cafans.com">Visiter www.cafans.com</a></p>
+    </div>
+  </footer>
+</body>
+</html>
